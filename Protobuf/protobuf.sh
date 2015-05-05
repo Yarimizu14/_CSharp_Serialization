@@ -52,8 +52,9 @@ fi
 OUTPUT_PB_FILE="${filename_without_ext}.pb"
 OUTPUT_CS_FILE="${filename_without_ext}.cs"
 
-protoc example.proto --descriptor_set_out=$OUTPUT_PB_FILE
-mono NET30/protogen.exe -i:$OUTPUT_PB_FILE -o:$OUTPUT_CS_FILE
+protoc $INPUT_PATH --descriptor_set_out=$OUTPUT_PB_FILE
+mono ./NET30/protogen.exe -i:$OUTPUT_PB_FILE -o:$OUTPUT_CS_FILE
 
 # remove pb file
 rm $OUTPUT_PB_FILE
+

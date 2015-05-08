@@ -1,6 +1,6 @@
 # Prepare
 
 ```
-brew install protoc
+brew install protobuf
 brew install mono
 ```
